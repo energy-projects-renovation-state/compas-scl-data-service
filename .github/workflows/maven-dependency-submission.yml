@@ -1,0 +1,13 @@
+name: Submit Maven dependencies
+
+on:
+  push:
+    branches-ignore:
+      - "renovate-and-workflow-files"
+
+jobs:
+  submit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Submit Dependency Snapshot
+        uses: advanced-security/maven-dependency-submission-action@v4
